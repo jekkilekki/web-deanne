@@ -49,7 +49,7 @@
 	<link rel="stylesheet" type="text/css"  href="css/skeleton.min.css">
 	<link rel="stylesheet" type="text/css"  href="css/jquery.fancybox-1.3.4.min.css" media="screen" />
     <link rel="stylesheet" type="text/css"  href="css/flexslider.min.css" media="screen" />
-  	<link rel="stylesheet" href="//fonts.googleapis.com/css?family=Open+Sans:300,400,600,700,800,300italic,400italic,600italic">
+  	<!--<link rel="stylesheet" href="//fonts.googleapis.com/css?family=Open+Sans:300,400,600,700,800,300italic,400italic,600italic"> -->
 
 
 </head>
@@ -1555,7 +1555,7 @@ If you need to show the page content on full height (liquid height), just add th
 
 /* Google font load checking */
 
-var googleFontLoad = false;
+var googleFontLoad = true;
   /*googleFontLoad = true;*/
 
 if(!googleFontLoad){
@@ -1704,7 +1704,7 @@ jQuery(function($){
     $('#reply_message').removeClass();
     $('#reply_message').html('')
     var regEx = "";
-            
+
     // validate Name
     var name = $("input#name").val();
     regEx=/^[A-Za-z .'-]+$/;
