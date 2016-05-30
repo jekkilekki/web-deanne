@@ -1625,13 +1625,13 @@ If you need to show the page content on full height (liquid height), just add th
       });
 
 
-  /* Remove google map. This map will add when page display */
+  /* Remove google map. This map will add when page display
     $(".page").find('#mapWrapper').each(function(){
         $(this).data('map', $(this).children(':first-child'));
         if(!$.browser.msie){
           $(this).children(':first-child').remove();
         }
-    });
+    }); */
 
 
   /* Initialize portfolio - isotope */
