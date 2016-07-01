@@ -7,6 +7,13 @@
 * 8/17/2011
 */
 
+.red { color: red; }
+.group { clear: both; }
+#resume-page table { margin: 1.5em 1.5em 3em!important; }
+#resume-page td { padding: 0.15em 1.5em!important; border: 1px solid rgba(255,255,255,0.1)!important; }
+#training p { margin-bottom: 0; }
+#training h5:not(:first-child), #training img { margin-top: 1em; }
+
 
 /* ---------------------------------------------------------------------- */
 /*	Reset & Clearfix (http://meyerweb.com/eric/tools/css/reset/)
@@ -32,7 +39,7 @@ html,body,div,span,applet,object,iframe,h1,h2,h3,h4,h5,h6,p,blockquote,pre,a,abb
 /* #Basic Styles
 ================================================== */
 	body {
-		font: 14px/1.7 'Helvetica Neue Light', HelveticaNeue-Light, 'Helvetica Neue', Helvetica, 'Lucida Sans Unicode', 'Lucida Grande', Arial, sans-serif;
+		font: 16px/1.8 'Helvetica Neue Light', HelveticaNeue-Light, 'Helvetica Neue', Helvetica, 'Lucida Sans Unicode', 'Lucida Grande', Arial, sans-serif;
 		font-weight:lighter;
 		-webkit-font-smoothing: antialiased; /* Fix for webkit rendering */
 		-webkit-text-size-adjust: 100%;
@@ -40,8 +47,8 @@ html,body,div,span,applet,object,iframe,h1,h2,h3,h4,h5,h6,p,blockquote,pre,a,abb
 
 /* Menu style*/
 	.header  .headerContent #mobile_nav, .header .headerContent .nav li{
-		font-family: 'Open Sans', Arial, Helvetica, sans-serif;
-		font-size:12px;
+		font-family: 'EB Garamond', 'Open Sans', Arial, Helvetica, sans-serif;
+		font-size:14px;
 		font-weight: 700;
 		line-height: 16px;
 		letter-spacing: -0.08px;
@@ -56,7 +63,7 @@ html,body,div,span,applet,object,iframe,h1,h2,h3,h4,h5,h6,p,blockquote,pre,a,abb
 ================================================== */
 
 	h1, h2, h3, h4, h5, h6 {
-		font-family: 'Open Sans', Arial, Helvetica, sans-serif;
+		font-family: 'EB Garamond', 'Open Sans', Arial, Helvetica, sans-serif;
 		font-weight: 400;
 		line-height: 1.25;
 		margin-bottom: 5px;
@@ -64,12 +71,12 @@ html,body,div,span,applet,object,iframe,h1,h2,h3,h4,h5,h6,p,blockquote,pre,a,abb
 	
 	h1 a, h2 a, h3 a, h4 a, h5 a, h6 a { font-weight: inherit; }
 	
-	h1{ font-size: 32px; margin-bottom: 14px;}
-	h2{ font-size: 28px; margin-bottom: 12px;}
-	h3{ font-size: 23px; margin-bottom: 10px;}
-	h4{ font-size: 18px; margin-bottom: 10px;}
-	h5{ font-size: 14px; }
-	h6{ font-size: 12px; line-height: 18px;}
+	h1{ font-size: 36px; margin-bottom: 14px;}
+	h2{ font-size: 32px; margin-bottom: 12px;}
+	h3{ font-size: 27px; margin-bottom: 10px;}
+	h4{ font-size: 22px; margin-bottom: 10px;}
+	h5{ font-size: 18px; }
+	h6{ font-size: 16px; line-height: 18px;}
 	
 	h3 { font-weight: 600; }
 	
@@ -79,7 +86,7 @@ html,body,div,span,applet,object,iframe,h1,h2,h3,h4,h5,h6,p,blockquote,pre,a,abb
 		}
 		
 	.title{
-		font-size: 14px;
+		font-size: 18px;
 		font-weight: 400;
 		}
 	
@@ -92,7 +99,7 @@ html,body,div,span,applet,object,iframe,h1,h2,h3,h4,h5,h6,p,blockquote,pre,a,abb
 		}
 	
 	.large_font{
-		font-family: 'Open Sans', Arial, Helvetica, sans-serif;
+		font-family: 'EB Garamond', 'Open Sans', Arial, Helvetica, sans-serif;
 		font-size:50px;
 		letter-spacing: -0.7px;
 		}
@@ -133,7 +140,7 @@ html,body,div,span,applet,object,iframe,h1,h2,h3,h4,h5,h6,p,blockquote,pre,a,abb
 	 
 	.text_hover { padding: 0px 4px 2px 4px;}
 	.list_hover { 
-		font-family: 'Open Sans', Arial, Helvetica, sans-serif;
+		font-family: 'EB Garamond', 'Open Sans', Arial, Helvetica, sans-serif;
 		display:inline-block;
 		font-size: 12px; 
 		font-weight: 400;
@@ -194,7 +201,7 @@ html,body,div,span,applet,object,iframe,h1,h2,h3,h4,h5,h6,p,blockquote,pre,a,abb
 
 	a.button, .button,
 	button {
-		font-family: 'Open Sans', Arial, Helvetica, sans-serif;
+		font-family: 'EB Garamond', 'Open Sans', Arial, Helvetica, sans-serif;
 		white-space: nowrap;
 	  	display: inline-block;
 	  	font-weight: bold;
@@ -449,7 +456,7 @@ html,body,div,span,applet,object,iframe,h1,h2,h3,h4,h5,h6,p,blockquote,pre,a,abb
 		height:65px;
 		text-align:center;
 		font-size:12px;
-		font-family: 'Open Sans', Arial, Helvetica, sans-serif;
+		font-family: 'EB Garamond', 'Open Sans', Arial, Helvetica, sans-serif;
 		font-weight: 600;
 		line-height: 1.25;
 		padding: 29px 10px 0px 0px;
@@ -827,7 +834,7 @@ html,body,div,span,applet,object,iframe,h1,h2,h3,h4,h5,h6,p,blockquote,pre,a,abb
 	
 	#options li {
 		float: left;
-		font-family: 'Open Sans', Arial, Helvetica, sans-serif;
+		font-family: 'EB Garamond', 'Open Sans', Arial, Helvetica, sans-serif;
 		font-size:11px;
 		font-weight: 700;
 		line-height: 16px;
@@ -923,7 +930,7 @@ html,body,div,span,applet,object,iframe,h1,h2,h3,h4,h5,h6,p,blockquote,pre,a,abb
 		}
 	
 	.portfolio .item a .img_text span{	
-		font-family: 'Open Sans', Arial, Helvetica, sans-serif;
+		font-family: 'EB Garamond', 'Open Sans', Arial, Helvetica, sans-serif;
 		font-weight: 400;
 		line-height: 1.25;
 		font-size: 12px;
@@ -940,7 +947,7 @@ html,body,div,span,applet,object,iframe,h1,h2,h3,h4,h5,h6,p,blockquote,pre,a,abb
 		display:inline-block;
 		position:relative;
 		
-		font-family:'Open Sans', Arial, Helvetica, sans-serif;
+		font-family: 'EB Garamond', 'Open Sans', Arial, Helvetica, sans-serif;
 		font-weight:400;
 		line-height:1.25;
 		font-size:12px;

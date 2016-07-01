@@ -22,15 +22,15 @@
 				// default variables
 				pageBackground : [],
 				backgroundOverlay : '',
-				pageHolderHeight_desktop : 420,
+				pageHolderHeight_desktop : 600,
 				pageHolderHeight_ipad : 380,
 				homePage : "",
 				
-				pageAnimationType : "slide",
+				pageAnimationType : "fade",
 				
 				galleryImageResize : "fill",
-				galleryAutoplay : true,
-				gallerySlideshowDelay : 1.5
+				galleryAutoplay : false,
+				gallerySlideshowDelay : 3
 				
 			} , params);
 
@@ -897,7 +897,8 @@
 				self.shGal.stop().animate({ "top":"0px"}, 200,"easeOutQuart");
 				if(ani){
 					var vv = false;
-					self.pHol.animate({"height": self.galHidHig+"px"},{
+					// self.pHol.animate({"height": self.galHidHig+"px"},{
+                    self.pHol.animate({"height": 0+"px"},{
 					  	duration:700, easing:"easeInOutQuart", queue :false,
 					  	step: function(now, fx) {	 
 						  if(Math.round(now)-300 < self.galHidHig && !vv){
@@ -911,20 +912,34 @@
 					
 				}else{
 					self.fsGalThmSet(false);
-					self.pHol.css({"height": self.galHidHig+"px", "top":(pTpos)});
+                    // self.pHol.css({"height": self.galHidHig+"px", "top":(pTpos)});
+					self.pHol.css({"height": 0+"px", "top":(pTpos)});
 				}
 			}else{
 				self.fsGalThmSet(false);
 				self.shGal.stop().animate({ "top":"15px"}, 200,"easeInOutQuart");
 				pTpos = $(window).height()-($(".contentWarp").position().top+$(".logo").height()+15+self.galHidHig);
 				if(ani){
-					self.fsWra.animate({"height": 1+"px" }, 500,"easeInOutQuart");
+					self.fsWra.animate({"height": 0+"px" }, 500,"easeInOutQuart");
 					self.pHol.animate({"top": pTpos+32}, 500,"easeInOutQuart");
 				}else{
-					self.fsWra.css({"height": 1+"px"});
+					self.fsWra.css({"height": 0+"px"});
 					self.pHol.css({"top": pTpos+32+"px"});
 				}
 			}
+            // Original ELSE
+//            else{
+//				self.fsGalThmSet(false);
+//				self.shGal.stop().animate({ "top":"15px"}, 200,"easeInOutQuart");
+//				pTpos = $(window).height()-($(".contentWarp").position().top+$(".logo").height()+15+self.galHidHig);
+//				if(ani){
+//					self.fsWra.animate({"height": 1+"px" }, 500,"easeInOutQuart");
+//					self.pHol.animate({"top": pTpos+32}, 500,"easeInOutQuart");
+//				}else{
+//					self.fsWra.css({"height": 1+"px"});
+//					self.pHol.css({"top": pTpos+32+"px"});
+//				}
+//			}
 		},
 		
 		// Gallery thumbnails reset and arrange function

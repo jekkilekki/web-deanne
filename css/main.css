@@ -73,7 +73,7 @@
 				
 				.header .headerContent .nav ul li a{
 					height:100%;
-					padding:20px 15px 15px 15px;
+					padding:20px 15px 20px 15px;
 					display: block;
 					text-align:center;
 					cursor:pointer ;
@@ -143,7 +143,7 @@
 				}
 
 				.header .topContact {
-					float: right; display: inline; margin-top: 15px; margin-right: 10px;
+					float: right; display: inline; margin-top: 10px; margin-right: 10px;
 					width: 180px;
 					text-align:right;
 				}
@@ -185,7 +185,7 @@
 		
 			.mainContainer .logo img{
 				position: absolute;
-				bottom:0px;
+/*				bottom:0px;*/
 				
 			}
 
@@ -424,7 +424,7 @@
 	.header .headerContent .nav ul li  a{ padding:12px 15px 10px 15px; }
 	.header .headerContent .highlight{ display:block; }
 	.header .headerContent #mobile_nav{ display:none; position:absolute; }	
-	.header .topContact { width: 160px;  margin-top: 10px; }	
+	.header .topContact { width: 160px;  margin-top: 0px; }	
 	
 	/* full size and medium size content scrollbar*/
 	.medium_size #scrollbar_holder .viewport { height: 265px;  }
@@ -446,7 +446,7 @@
 @media only screen and (min-width: 960px) and (max-width: 1024px) {
 	/* Header - Menu style */	
 	.header .headerContent .nav{ width: 730px;	}
-	.header .topContact { width: 200px;  margin-top: 10px; }
+	.header .topContact { width: 200px;  margin-top: 0px; }
 	
 	#options{ margin-right:50px;}
 	
@@ -466,7 +466,7 @@
 	.header .headerContent .nav ul li .last{ padding-bottom:15px;}
 	.header .headerContent .highlight{ display:none; }
 	.header .headerContent #mobile_nav{ display:block;  position:relative; }
-	.header .topContact { width: 150px; }	
+	.header .topContact { width: 150px; margin-top: 5px; }	
 	
 	.header .headerContent .nav ul li ul { float:none; position:relative;  margin:0px;  }
 	.header .headerContent .nav ul li ul  li {float:none; margin:0px;top:0px; }
@@ -520,7 +520,7 @@
 	.header .headerContent .nav ul li .last{ padding-bottom:15px;}
 	.header .headerContent .highlight{ display:none; }
 	.header .headerContent #mobile_nav{ display:block;  position:relative; }
-	.header .topContact { width: 190px; }	
+	.header .topContact { width: 190px; margin-top: 5px; }	
 	
 	.header .headerContent .nav ul li ul { float:none; position:relative;  margin:0px;  }
 	.header .headerContent .nav ul li ul  li {float:none; margin:0px;top:0px; }
