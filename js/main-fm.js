@@ -913,7 +913,7 @@
 				}else{
 					self.fsGalThmSet(false);
                     // self.pHol.css({"height": self.galHidHig+"px", "top":(pTpos)});
-					self.pHol.css({"height": 0+"px", "top":9999+"px"});
+					self.pHol.css({"height": 0+"px", "top":(pTpos)});
 				}
 			}else{
 				self.fsGalThmSet(false);
@@ -1215,8 +1215,10 @@
 				$(this).isotope( {}, 'reLayout' );						 
 			});
 			
-			self.fsNxt.css({"top":$(window).height()/2+self.fsNxt.height()/2+"px"});
-			self.fsPre.css({"top":$(window).height()/2+self.fsPre.height()/2+"px"});
+			//self.fsNxt.css({"top":$(window).height()/2+self.fsNxt.height()/2+"px"});
+			//self.fsPre.css({"top":$(window).height()/2+self.fsPre.height()/2+"px"});
+            self.fsNxt.css({"top":9999+"px"});
+			self.fsPre.css({"top":9999+"px"});
 			self.fsTxt.css({"height":$(window).height()});
 
 			self.fsTxtSho = (/*!self.mobile && !self.mobileDevice*/ true);

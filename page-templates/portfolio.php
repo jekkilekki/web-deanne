@@ -130,12 +130,15 @@
                 
         <!-- Film Images BEGIN -->
                 
-                <div class="item film" >
-                    <a rel="example_group" title="Concerned Psychologist" href="images/site/film-images/film1.png" class="type1" >
+                <div class="item film">
+                    <a rel="example_group" title="<h1>Watch: <a href='https://youtu.be/ONwpezTD2_M' target='_blank'>Concerned Psychologist</a></h1>" href="images/site/film-images/film1.png" class="type1" >
+<!--
                         <div class="img_text">
                             <h3 class="title_light">Concerned Psychologist</h3>
                             <em>YouTube: https://youtu.be/ONwpezTD2_M</em>
                         </div>
+-->
+<!--                        <div class="addVideo" data-width="100%" data-height="220px" data-autoplay="true" data-url="http://vimeo.com/37627670" ></div>-->
                         <img src="images/site/film-images/film1.png" alt="Concerned Psychologist" />
                     </a>
                     <!-- @TODO fix this 
@@ -144,11 +147,13 @@
                 </div>
 
                 <div class="item film" >
-                    <a rel="example_group" title="One 2 Zero Trailer" href="images/site/film-images/film2.png" class="type1" >
+                    <a rel="example_group" title="<h1>Watch: <a href='https://vimeo.com/108378306' target='_blank'>One 2 Zero Trailer</a></h1>" href="images/site/film-images/film2.png" class="type1" >
+<!--
                         <div class="img_text">
                             <h3 class="title_light">One 2 Zero Trailer</h3>
                             <em>Vimeo: https://vimeo.com/108378306</em>
                         </div>
+-->
                         <img src="images/site/film-images/film2.png" alt="One 2 Zero Trailer" />
                     </a>
                     <!-- @TODO fix this 
@@ -161,11 +166,13 @@
         <!-- Voice Over BEGIN -->
                 
                 <div class="item vo" >
-                    <a rel="example_group" title="Commercial VO: Life of the Party" href="images/site/film-images/vo1.png" class="type1" >
+                    <a rel="example_group" title="<h1>Watch: <a href='https://youtu.be/ehg0VyQ4Zl4' target='_blank'>Commercial VO: Life of the Party</a></h1>" href="images/site/film-images/vo1.png" class="type1" >
+<!--
                         <div class="img_text">
                             <h3 class="title_light">Commercial VO: Life of the Party</h3>
                             <em>YouTube: https://youtu.be/ehg0VyQ4Zl4</em>
                         </div>
+-->
                         <img src="images/site/film-images/vo1.png" alt="Commercial VO: Life of the Party" />
                     </a>
                     <!-- @TODO fix this 
@@ -174,11 +181,13 @@
                 </div>
 
                 <div class="item vo" >
-                    <a rel="example_group" title="Commercial VO: The Bestfriend" href="images/site/film-images/vo2.png" class="type1" >
+                    <a rel="example_group" title="<h1>Watch: <a href='https://youtu.be/mud9k76Jwv4' target='_blank'>Commercial VO: The Bestfriend</a></h1>" href="images/site/film-images/vo2.png" class="type1" >
+<!--
                         <div class="img_text">
                             <h3 class="title_light">Commercial VO: The Bestfriend</h3>
                             <em>YouTube: https://youtu.be/mud9k76Jwv4</em>
                         </div>
+-->
                         <img src="images/site/film-images/vo2.png" alt="Commercial VO: The Bestfriend" />
                     </a>
                     <!-- @TODO fix this 
@@ -187,11 +196,13 @@
                 </div>
                 
                 <div class="item vo" >
-                    <a rel="example_group" title="Commercial VO: Sophisticated" href="images/site/film-images/vo3.png" class="type1" >
+                    <a rel="example_group" title="<h1>Watch: <a href='https://youtu.be/zLvIE5ZwLDc' target='_blank'>Commercial VO: Sophisticated</a></h1>" href="images/site/film-images/vo3.png" class="type1" >
+<!--
                         <div class="img_text">
                             <h3 class="title_light">Commercial VO: Sophisticated</h3>
                             <em>YouTube: https://youtu.be/zLvIE5ZwLDc</em>
                         </div>
+-->
                         <img src="images/site/film-images/vo3.png" alt="Commercial VO: Sophisticated" />
                     </a>
                     <!-- @TODO fix this 
@@ -200,11 +211,13 @@
                 </div>
                 
                 <div class="item vo" >
-                    <a rel="example_group" title="Big Data podcast Trailer #3" href="images/site/film-images/vo4.png" class="type1" >
+                    <a rel="example_group" title="<h1>Watch: <a href='https://youtu.be/IGo1OjQnwpw' target='_blank'>Big Data podcast Trailer #3</a></h1>" href="images/site/film-images/vo4.png" class="type1" >
+<!--
                         <div class="img_text">
                             <h3 class="title_light">Big Data podcast Trailer #3</h3>
                             <em>YouTube: https://youtu.be/IGo1OjQnwpw</em>
                         </div>
+-->
                         <img src="images/site/film-images/vo4.png" alt="Big Data podcast Trailer #3" />
                     </a>
                     <!-- @TODO fix this 

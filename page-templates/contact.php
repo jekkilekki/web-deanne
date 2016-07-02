@@ -37,9 +37,11 @@
                     <br/><br/>
                     Email: <a>de(AT)deannedubin.com</a> <br/>
                     </p>
+<!--
                     <div class="separator_mini"></div>
                     <h5 class="title_light light_color"><span>Powerful work from De Anne Dubin as J.S., the chilly psychiatrist who ultimately opens her heart. "NECESSARY TARGETS"</span></h5>
                     <h6 class="title_light light_color"><span>Julie Kistler of The News-Gazette</span></h6>
+-->
             </div> 
 
             <!-- Third column -->

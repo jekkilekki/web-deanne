@@ -62,7 +62,7 @@
       pageHolderHeight_ipad : 380,
 
       /* Full screen gallery options for autoplay and slideshow delay time*/
-      galleryAutoplay : "true",
+      galleryAutoplay : "false",
       gallerySlideshowDelay : 3,
       /* Full screen gallery default image resize types. Options are fill/fit/none */
       galleryImageResize : "fill"

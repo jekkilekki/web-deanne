@@ -22,15 +22,27 @@
     }
 }
 
+/* Move gallery (homepage) captions closer to the bottom */
 .caption_style1,
 .caption_style2 {
     bottom: 50px;
+}
+@media (max-width: 480px) {
+    .caption_style2 {
+        width: 300px;
+    }
 }
 @media (min-width: 48em) {
     .caption_style1,
     .caption_style2 {
         bottom: 100px;
     }
+}
+
+/* Remove Next/Prev buttons from gallery (homepage) */
+.fsGalPreviousImg,
+.fsGalNextImg {
+    display: none!important;
 }
 
 /* 
