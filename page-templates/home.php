@@ -31,7 +31,7 @@
                          -->
 
                         <div class="fsThumb" data-src="images/site/background-images/background1_2.jpg" data-src-small="images/site/background-images/background1_2.jpg" data-imgResize="fill"  >
-                        	<img  src="images/site/homepage-images/homepage1.jpg" class="fsThumb" alt="Wonder" />
+                        	<img  src="images/site/homepage-images/homepage1.jpg" class="fsThumb-scale" alt="Big Data Show" />
                             <div class="fs_caption caption_style2">
                                 <div><a href="http://www.bigdata.show"><img class="large_image" src="images/site/homepage-images/homepage1.jpg"></a></div>
                             	<div> <h2 class="title_light light_color text_shadow"><span>Upcoming</span></h2></div>
@@ -39,15 +39,15 @@
                             </div>
                         </div>
 
-<!--
+
                          <div class="fsThumb" data-src="images/site/background-images/background1_2.jpg" data-src-small="images/site/background-images/background1_2.jpg" data-imgResize="fill"  >
-                        	<img  src="images/site/background-images/background1_2.jpg" class="fsThumb" alt="Wonder" />
+                        	<img  src="images/site/background-images/background1_2.jpg" class="fsThumb-scale" alt="Rosa" />
                             <div class="fs_caption caption_style1">
                             	<div> <h4 class="title_light light_color"><span>In the lead [role], De Anne Dubin... [was] engaging, and Dubin held on to an appealing emotional honesty throughout. "ROSA"</span></h4></div>
                                 <div> <h5 class="title_light light_color"><span>Thomas Garvey of The Boston Globe</span></h5></div>
                             </div>
                         </div>
-                        
+                       
                         <div class="fsThumb" data-src="images/site/background-images/background1_2.jpg" data-src-small="images/site/background-images/background1_2.jpg" data-imgResize="fill"  >
                         	<img  src="images/site/background-images/background1_2.jpg" class="fsThumb" alt="Wonder" />
                             <div class="fs_caption caption_style2">
@@ -63,7 +63,6 @@
                                 <div> <h5 class="title_light light_color"><span>Jeanne McCartin in Showcase Magazine</span></h5></div>
                             </div>
                         </div>
--->
 
             		</div>
                 </div>

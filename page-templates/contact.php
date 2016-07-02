@@ -7,7 +7,7 @@
             <h3 class="title_light">Contact</h3>
 
             <div class="separator_mini"></div>
-
+<!--            <div class="extra_padding">-->
            <!-- First column -->
             <div class="four columns  alpha">
                 <div class="mobile_right_spacing">
@@ -63,6 +63,7 @@
                     </form>
                 </div>
             </div>
+<!--            </div>-->
 
         </div>
     </div>

@@ -1,0 +1,222 @@
+/**
+    Custom CSS for the De Anne Dubin website
+
+    Author: Aaron Snowberger
+    Author URI: http://aaronsnowberger.com
+**/
+
+.red { color: red; }
+.group { clear: both; }
+#resume-page table { margin: 1.5em 1.5em 3em!important; }
+#resume-page td { padding: 0.15em 1.5em!important; border: 1px solid rgba(255,255,255,0.1)!important; }
+#training p { margin-bottom: 0; }
+#training h5:not(:first-child), #training img { margin-top: 1em; }
+
+.extra_padding {
+    box-sizing: border-box;
+    padding: 0 1em;
+}
+@media (min-width: 48em) {
+    .extra_padding {
+        padding: 0;
+    }
+}
+
+.caption_style1,
+.caption_style2 {
+    bottom: 50px;
+}
+@media (min-width: 48em) {
+    .caption_style1,
+    .caption_style2 {
+        bottom: 100px;
+    }
+}
+
+/* 
+    Responsive Tables 
+    @link ref: http://codepen.io/pixelchar/pen/rfuqK
+*/
+.table-container {
+    margin: 5% 3%;
+}
+@media (min-width: 48em) {
+    .table-container {
+        margin: 2%;
+    }
+}
+@media (min-width: 75em) {
+    margin: 2em auto;
+    max-width: 75em;
+}
+
+.responsive-table {
+    width: 90%;
+    margin-bottom: 1.5em;
+}
+@media (min-width: 48em) {
+    .responsive-table {
+        border: 2px solid rgba(255,255,255,0.3);
+    }
+}
+
+.responsive-table thead {
+    /* Accessibly hide <thead> on narrow viewports */
+    position: absolute;
+    clip: rect(1px 1px 1px 1px); /* IE6, IE7 */
+    clip: rect(1px, 1px, 1px, 1px);
+    padding: 0;
+    border: 0;
+    height: 1px;
+    width: 1px;
+    overflow: hidden;
+}
+/* Unhide <thead> on wide viewports */
+@media (min-width: 48em) {
+    .responsive-table thead {
+        position: relative;
+        clip: auto;
+        height: auto;
+        width: auto;
+        overflow: auto;
+    }
+}
+
+.responsive-table th {
+    background-color: rgba(255,255,255,0.3);
+    font-weight: normal;
+    text-align: center;
+    color: white;
+}
+.responsive-table th::first-of-type {
+    text-align: left;
+}
+@media (min-width: 48em) {
+    .responsive-table th {
+        border-left: 1px solid rgba(255,255,255,0.1);
+    }
+    .responsive-table th:first-of-type {
+        border: none;
+    }
+}
+
+/* Set these items to display: block for narrow viewports */
+.responsive-table tbody,
+.responsive-table tr,
+.responsive-table th,
+.responsive-table td {
+    display: block;
+    padding: 0;
+/*    text-align: left;*/
+    white-space: normal;
+}
+/* Undo display: block */
+@media (min-width: 48em) {
+    .responsive-table tr {
+        display: table-row;
+    }
+}
+.responsive-table th,
+.responsive-table td {
+    padding: 0.5em;
+    vertical-align: middle;
+}
+@media (min-width: 30em) {
+    .responsive-table th,
+    .responsive-table td {
+/*        padding: 0.75em 0.5em;*/
+    }
+}
+@media (min-width: 48em) {
+    .responsive-table th,
+    .responsive-table td {
+        display: table-cell;
+        padding: 0.5em;
+        width: 25%;
+    }
+}
+@media (min-width: 62em) {
+    .responsive-table th,
+    .responsive-table td {
+        padding: 0.75em 0.5em;
+    }
+}
+@media (min-width: 75em) {
+    .responsive-table th,
+    .responsive-table td {
+        padding: 0.75em;
+    }
+}
+
+.responsive-table caption {
+    margin-bottom: 1em;
+    font-family: 'EB Garamond';
+    font-size: 1.4em;
+/*    font-weight: bold;*/
+    text-align: center;
+}
+@media (min-width: 48em) {
+    .responsive-table caption {
+        font-size: 1.6em;
+    }
+}
+
+.responsive-table tbody tr {
+    margin-bottom: 1em;
+    border: 2px solid rgba(255,255,255,0.3);
+}
+.responsive-table tbody tr:last-of-type {
+    margin-bottom: 0;
+}
+/* Undo display: block */
+@media (min-width: 48em) {
+    .responsive-table tbody {
+        display: table-row-group;
+    }
+    .responsive-table tbody tr {
+        display: table-row;
+        border-width: 1px;
+    }
+    .responsive-table tbody tr:nth-of-type(even) {
+        background-color: rgba(255,255,255,0.1);
+    }
+}
+
+.responsive-table th[scope="row"] {
+    background-color: rgba(255,255,255,0.3);
+    color: white;
+}
+@media (min-width: 48em) {
+    .responsive-table th[scope="row"] {
+        background-color: transparent;
+        color: white;
+        text-align: left;
+        border: 1px solid rgba(255,255,255,0.1);
+    }
+}
+
+.responsive-table td {
+    text-align: right;
+}
+@media (min-width: 48em) {
+    .responsive-table td {
+        text-align: center;
+    }
+}
+
+.responsive-table td[data-title]:before {
+    content: attr(data-title);
+    float: left;
+    font-size: .8em;
+    color: rgba(255,255,255,0.8);
+}
+@media (min-width: 30em) {
+    .responsive-table td[data-title]:before {
+        font-size: 0.9em;
+    }
+}
+@media (min-width: 48em) {
+    .responsive-table td[data-title]:before {
+        content: none; /* Don't show data-title labels */
+    }
+}

@@ -23,7 +23,7 @@
     google.setOnLoadCallback(function() {
     WebFont.load({
       google: {
-        families: [ 'Open+Sans']
+        families: [ 'EB+Garamond']
       }});
       googleFontLoad = true;
     });
@@ -54,7 +54,7 @@
       homePage : "",
 
       /* Set fade / slide animation for page transition */
-      pageAnimationType : 'slide',
+      pageAnimationType : 'fade',
 
       /* set pageHolder height, if you need to set all the page height in liquid and not align to center,
        just set value "100%" to the below 2 varaibles */
@@ -63,7 +63,7 @@
 
       /* Full screen gallery options for autoplay and slideshow delay time*/
       galleryAutoplay : "true",
-      gallerySlideshowDelay : 1.5,
+      gallerySlideshowDelay : 3,
       /* Full screen gallery default image resize types. Options are fill/fit/none */
       galleryImageResize : "fill"
 
@@ -143,13 +143,13 @@
     });
 
     // Remove title tag, so that the title text doesn't show one tooltip when mouse hover the thumbnail
-    fancy_Obj.each(function(){
-      $(this).attr(('data-title'),$(this).find(".img_text").html());
-      if($(this).attr('title')){
-        $($(this).find(('.img_text')).html(String('<span class="img_txt_hold">'+$(this).attr('title')))+'</span>');
-      }
-      $(this).attr('title', '');
-    })
+//    fancy_Obj.each(function(){
+//      $(this).attr(('data-title'),$(this).find(".img_text").html());
+//      if($(this).attr('title')){
+//        $($(this).find(('.img_text')).html(String('<span class="img_txt_hold">'+$(this).attr('title')))+'</span>');
+//      }
+//      $(this).attr('title', '');
+//    })
 
   /* End fancybox plug-in for portfolio */
 
@@ -200,7 +200,7 @@
         success: function() {
           $('#reply_message').removeClass('email_loading');
           $('#reply_message').addClass('list3');
-          $('#reply_message').html("Mail send sucessfully")
+          $('#reply_message').html("Mail sent sucessfully")
           .hide()
           .fadeIn(1500);
             }

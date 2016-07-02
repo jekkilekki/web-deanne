@@ -144,7 +144,7 @@
 			self.txtAniDly = 200;	// Text  animation delay
 			self.fsAutoPlay = defaults.galleryAutoplay == "true" || defaults.galleryAutoplay == true;	// gallery slideshow autoplay
 			self.fsDelay = defaults.gallerySlideshowDelay;	// Gallery slide show delay time
-			self.fsTxtSho = false;
+			self.fsTxtSho = true;
 			self.isFsGal = false;
 			
 			// Gallery thumbnail mouse events
@@ -913,7 +913,7 @@
 				}else{
 					self.fsGalThmSet(false);
                     // self.pHol.css({"height": self.galHidHig+"px", "top":(pTpos)});
-					self.pHol.css({"height": 0+"px", "top":(pTpos)});
+					self.pHol.css({"height": 0+"px", "top":9999+"px"});
 				}
 			}else{
 				self.fsGalThmSet(false);
@@ -1219,7 +1219,7 @@
 			self.fsPre.css({"top":$(window).height()/2+self.fsPre.height()/2+"px"});
 			self.fsTxt.css({"height":$(window).height()});
 
-			self.fsTxtSho = (!self.mobile && !self.mobileDevice);
+			self.fsTxtSho = (/*!self.mobile && !self.mobileDevice*/ true);
 
 			$(".pageHolder .page").find('.fs_gallery').each(function(){
 				
