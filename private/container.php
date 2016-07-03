@@ -53,7 +53,7 @@ Note: Don't edit main frame, except comment area
 	<div class="contentWarp container"  >
             <div class="logo" >
 <!--                Place your logo here. data-src-small use to add logo for mobile device-->
-				<a href="#home"><img src="images/site/logo-images/DeAnneDubin_logo-inv.png" data-src-small="images/site/logo-images/DeAnneDubin_logo2-inv.png" alt="De Anne Dubin | Actor - Singer"></a>
+				<a href="#home"><img src="images/site/logo-images/DeAnneDubin_logo-inv.png" data-src-small="images/site/logo-images/DeAnneDubin_logo-inv.png" alt="De Anne Dubin | Actor - Singer"></a>
             </div>
 
             <div class="sixteen pageHolder" >

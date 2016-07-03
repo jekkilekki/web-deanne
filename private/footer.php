@@ -2,11 +2,11 @@
 	<div class="container " >
 
         	<!-- Place your copyright text -->
-        	<div class="six columns"><h6 class="bottomText">Copyright &copy; 2016 De Anne Dubin</h6></div>
+        	<div class="six columns"><h6 class="bottomText">Copyright &copy; 2012-<?php echo date( 'Y' ); ?> De Anne Dubin</h6></div>
             <!-- Phone -->
             <div class="five columns offset-by-one"><h6 class="bottomText"><span class="list1">1.917.923.2136</span></h6></div>
             <!-- Email -->
-            <div class="three columns offset-by-one"><h6 class="bottomText"><span class="list2">de(AT)deannedubin.com</span></h6></div>
+            <div class="three columns offset-by-one"><h6 class="bottomText"><span class="list2"><a href="mailto:de@deannedubin.com">de(AT)deannedubin.com</a></span></h6></div>
             <!-- Social network web page link
             <div class="four  columns" >
                 <ul class="social_bookmarks noMargin">

@@ -763,7 +763,7 @@ html,body,div,span,applet,object,iframe,h1,h2,h3,h4,h5,h6,p,blockquote,pre,a,abb
 	/* style1 */
 	.caption_style1{
 		width:400px;
-		bottom:150px;
+		bottom:200px;
 		right:10px;
 		}
 	.caption_style1 div{
@@ -775,7 +775,7 @@ html,body,div,span,applet,object,iframe,h1,h2,h3,h4,h5,h6,p,blockquote,pre,a,abb
 	/* style2 */
 	.caption_style2{
 		width:400px;
-		bottom:150px;
+		bottom:200px;
 		left:10px;
 		}
 	.caption_style2 div{

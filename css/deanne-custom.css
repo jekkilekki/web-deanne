@@ -7,10 +7,52 @@
 
 .red { color: red; }
 .group { clear: both; }
-#resume-page table { margin: 1.5em 1.5em 3em!important; }
-#resume-page td { padding: 0.15em 1.5em!important; border: 1px solid rgba(255,255,255,0.1)!important; }
+.visible { visibility: visible; }
+.hidden { visibility: hidden; }
+
 #training p { margin-bottom: 0; }
 #training h5:not(:first-child), #training img { margin-top: 1em; }
+
+/* Category name animation */
+#options li a .catName:before{
+    content: attr(data-title);
+    bottom: 26px;
+    position:absolute;
+    padding: 5px 0px 3px 7px;
+    text-indent:-6px;
+
+
+    zoom: 1; /* gives the object layout */
+    -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=70)";
+    filter: alpha(opacity=70);
+    -moz-opacity: 0.7;
+    -khtml-opacity: 0.7;
+    opacity : 0.7;
+
+    -webkit-transition: all 0.25s ease-in-out;
+    -moz-transition: all 0.25s ease-in-out;
+    -o-transition: all 0.25s ease-in-out;
+    -ms-transition: all 0.25s ease-in-out;
+    transition: all 0.25s ease-in-out;
+}
+
+
+@media (max-width: 480px) {
+    ul ul,
+    ul ul ul {
+        margin-left: 1.5em;
+    }
+    .fs_caption .medium_image {
+        width: 150px!important;
+        height: auto!important;
+    }
+    .fs_caption h3 {
+        font-size: 22px;
+    }
+    .fs_caption h5 {
+        font-size: 16px;
+    }
+}
 
 .extra_padding {
     box-sizing: border-box;
@@ -28,8 +70,10 @@
     bottom: 50px;
 }
 @media (max-width: 480px) {
+    .caption_style1,
     .caption_style2 {
         width: 300px;
+        bottom: 0px;
     }
 }
 @media (min-width: 48em) {
@@ -64,7 +108,8 @@
 
 .responsive-table {
     width: 90%;
-    margin-bottom: 1.5em;
+/*    margin-bottom: 1.5em;*/
+    margin: 1.5em 1.5em 3em!important;
 }
 @media (min-width: 48em) {
     .responsive-table {
@@ -128,6 +173,11 @@
         display: table-row;
     }
 }
+.responsive-table td {
+    padding: 0.25em 1.5em 0.25em 5em!important; 
+    border: 1px solid rgba(255,255,255,0.1)!important;
+}
+
 .responsive-table th,
 .responsive-table td {
     padding: 0.5em;
@@ -145,6 +195,18 @@
         display: table-cell;
         padding: 0.5em;
         width: 25%;
+    }
+    .responsive-table td {
+        padding: 0.25em 1.5em!important;
+    }
+    .responsive-table tr th {
+        width: 20%;
+    }
+    .responsive-table tr td {
+        width: 15%;
+    }
+    .responsive-table tr td:last-of-type {
+        width: 50%;
     }
 }
 @media (min-width: 62em) {
@@ -221,6 +283,7 @@
     float: left;
     font-size: .8em;
     color: rgba(255,255,255,0.8);
+    margin-left: -5em;
 }
 @media (min-width: 30em) {
     .responsive-table td[data-title]:before {

@@ -30,7 +30,7 @@
 
             <!-- Second column -->
             <div class="five columns  alpha">
-                <h4>Contact Details</h4>
+<!--                <h4>Contact Details</h4>-->
 
                     <p>
                     Tel: 1.917.923.2136
@@ -52,7 +52,7 @@
                         <input type="text" value="Name" id="name" name="name"
                         	onfocus="if(this.value == 'Name') {this.value = '';}"
                             onblur="if (this.value == '') {this.value = 'Name';}" />
-                        <input type="text" value="Email" id="email" name="email"
+                        <input type="email" value="Email" id="email" name="email"
                         	onfocus="if(this.value == 'Email') {this.value = '';}"
                             onblur="if (this.value == '') {this.value = 'Email';}" />
                         <hr>

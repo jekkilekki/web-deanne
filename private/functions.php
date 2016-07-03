@@ -10,6 +10,7 @@
 <script type="text/javascript" src="js/jquery.isotope.min.js" ></script>
 <script type="text/javascript" src="js/jquery.flexslider.min.js"></script>
 <script type="text/javascript" src="js/main-fm.js"></script>
+<script type="text/javascript" src="js/deanne-fancy-video-box.js"></script>
 
 <script>
 
@@ -44,9 +45,6 @@
                 { src : 'images/site/training-images/training1.jpg', src_small : 'images/site/training-images/training1.jpg'},
                 { src : 'images/site/background-images/background4.jpg', src_small : 'images/site/background-images/background4.jpg'},
                 { src : 'images/site/background-images/background3.jpg', src_small : 'images/site/background-images/background3.jpg'},
-                { src : 'images/background/background6.jpg', src_small : 'images/background/background6_s.jpg'},
-                { src : 'images/background/background7.jpg', src_small : 'images/background/background7_s.jpg'},
-                { src : 'images/background/background8.jpg', src_small : 'images/background/background8_s.jpg'}
                   ],
 
       /* Set the opening page.
@@ -143,13 +141,13 @@
     });
 
     // Remove title tag, so that the title text doesn't show one tooltip when mouse hover the thumbnail
-//    fancy_Obj.each(function(){
-//      $(this).attr(('data-title'),$(this).find(".img_text").html());
-//      if($(this).attr('title')){
-//        $($(this).find(('.img_text')).html(String('<span class="img_txt_hold">'+$(this).attr('title')))+'</span>');
-//      }
-//      $(this).attr('title', '');
-//    })
+    fancy_Obj.each(function(){
+      $(this).attr(('data-title'),$(this).find(".img_text").html());
+      if($(this).attr('title')){
+        $($(this).find(('.img_text')).html(String('<span class="img_txt_hold">'+$(this).attr('title')))+'</span>');
+      }
+      $(this).attr('title', '');
+    })
 
   /* End fancybox plug-in for portfolio */
 
@@ -198,6 +196,12 @@
         url: "mailer.php",
         data: dataString,
         success: function() {
+            // Clear the inputs
+            $("input#name").val('');
+            $("input#email").val('');
+            $("textarea#comments").val('');
+            
+            
           $('#reply_message').removeClass('email_loading');
           $('#reply_message').addClass('list3');
           $('#reply_message').html("Mail sent sucessfully")
@@ -206,6 +210,8 @@
             }
           });
       return false;
+        
+      
 
     });
 

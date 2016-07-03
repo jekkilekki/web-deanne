@@ -22,7 +22,7 @@
 				// default variables
 				pageBackground : [],
 				backgroundOverlay : '',
-				pageHolderHeight_desktop : 600,
+				pageHolderHeight_desktop : 420,
 				pageHolderHeight_ipad : 380,
 				homePage : "",
 				
@@ -142,9 +142,10 @@
 			self.txtEndAni = true;
 			self.txtAniSpd = 600; 	// Text animation speed
 			self.txtAniDly = 200;	// Text  animation delay
-			self.fsAutoPlay = defaults.galleryAutoplay == "true" || defaults.galleryAutoplay == true;	// gallery slideshow autoplay
+			//self.fsAutoPlay = defaults.galleryAutoplay == "true" || defaults.galleryAutoplay == true;	// gallery slideshow autoplay
+            self.fsAutoPlay = false; // CHANGED
 			self.fsDelay = defaults.gallerySlideshowDelay;	// Gallery slide show delay time
-			self.fsTxtSho = true;
+			self.fsTxtSho = false;
 			self.isFsGal = false;
 			
 			// Gallery thumbnail mouse events
@@ -618,7 +619,7 @@
 			var self = this;
 			clearInterval(self.txtAniInt);
 
-			if(!self.mobileDevice){
+			//if(!self.mobileDevice){ // Uncomment this line (and closing } ) to HIDE gallery text on mobile
 			var ii = -1;
 			self.txtAniInt = setInterval(function(){
 				if(self.txtEndAni){
@@ -671,7 +672,7 @@
 				}
 	
 			}, 200);
-			}
+			//} // Uncomment this line (and opening } ) to HIDE gallery text on mobile
 			
 		},
 			
@@ -866,7 +867,19 @@
 			self.fsWra = $(".pageHolder .page .fs_gallery");
 			self.fsGal = $(".pageHolder .page .fs_thumbs");
 			
-			$(".pageHolder .page").animate({"margin-top":"15px"}, 	{duration:400, easing:"easeInOutQuart", queue :false});
+            
+			 $(".pageHolder .page").animate({"margin-top":"15px"}, 	{duration:400, easing:"easeInOutQuart", queue :false});
+            
+    /**
+     * ========================================================
+     * Aaron custom function to not show pageHolder on page change
+     * =========================================================
+     */ 
+            $(".pageHolder").css({"visibility": "hidden"});
+            $(".pageHolder .page").css({"visibility": "hidden"});
+            $(".fsThumb").css({"visibility": "hidden"});
+            $(".fsClo_inner").css({"visibility": "hidden"});
+            
 			
 			self.fsWra.css({ "height": self.fsWra.children(':first-child').children(':last-child').position().top+self.fsThuHig+15 });					
 			var pTpos = $(window).height()-($(".contentWarp").position().top+$(".logo").height()+20+self.galHidHig+self.foot.height())-10;
@@ -898,7 +911,7 @@
 				if(ani){
 					var vv = false;
 					// self.pHol.animate({"height": self.galHidHig+"px"},{
-                    self.pHol.animate({"height": 0+"px"},{
+                    self.pHol.animate({"height": 0+"px"},{ // CHANGED
 					  	duration:700, easing:"easeInOutQuart", queue :false,
 					  	step: function(now, fx) {	 
 						  if(Math.round(now)-300 < self.galHidHig && !vv){
@@ -913,21 +926,10 @@
 				}else{
 					self.fsGalThmSet(false);
                     // self.pHol.css({"height": self.galHidHig+"px", "top":(pTpos)});
-					self.pHol.css({"height": 0+"px", "top":(pTpos)});
-				}
-			}else{
-				self.fsGalThmSet(false);
-				self.shGal.stop().animate({ "top":"15px"}, 200,"easeInOutQuart");
-				pTpos = $(window).height()-($(".contentWarp").position().top+$(".logo").height()+15+self.galHidHig);
-				if(ani){
-					self.fsWra.animate({"height": 0+"px" }, 500,"easeInOutQuart");
-					self.pHol.animate({"top": pTpos+32}, 500,"easeInOutQuart");
-				}else{
-					self.fsWra.css({"height": 0+"px"});
-					self.pHol.css({"top": pTpos+32+"px"});
+					self.pHol.css({"height": 0+"px", "top":(pTpos)}); // CHANGED
 				}
 			}
-            // Original ELSE
+            // Aaron's Custom ELSE
 //            else{
 //				self.fsGalThmSet(false);
 //				self.shGal.stop().animate({ "top":"15px"}, 200,"easeInOutQuart");
@@ -935,11 +937,26 @@
 //				if(ani){
 //					self.fsWra.animate({"height": 1+"px" }, 500,"easeInOutQuart");
 //					self.pHol.animate({"top": pTpos+32}, 500,"easeInOutQuart");
+//                    self.pHol.animate({"top": pTpos+1000}, 500,"easeInOutQuart");
 //				}else{
 //					self.fsWra.css({"height": 1+"px"});
-//					self.pHol.css({"top": pTpos+32+"px"});
+//					self.pHol.css({"top": pTpos+1000+"px", "opacity": "0"});
+//                    self.pHol.css({"top": 9999+"px", "opacity": "0"});
 //				}
 //			}
+            // Original ELSE
+            else{
+				self.fsGalThmSet(false);
+				self.shGal.stop().animate({ "top":"15px"}, 200,"easeInOutQuart");
+				pTpos = $(window).height()-($(".contentWarp").position().top+$(".logo").height()+15+self.galHidHig);
+				if(ani){
+					self.fsWra.animate({"height": 1+"px" }, 500,"easeInOutQuart");
+					self.pHol.animate({"top": pTpos+32}, 500,"easeInOutQuart");
+				}else{
+					self.fsWra.css({"height": 1+"px"});
+					self.pHol.css({"top": pTpos+32+"px"});
+				}
+			}
 		},
 		
 		// Gallery thumbnails reset and arrange function
@@ -1221,7 +1238,7 @@
 			self.fsPre.css({"top":9999+"px"});
 			self.fsTxt.css({"height":$(window).height()});
 
-			self.fsTxtSho = (/*!self.mobile && !self.mobileDevice*/ true);
+			self.fsTxtSho = (!self.mobile && !self.mobileDevice);
 
 			$(".pageHolder .page").find('.fs_gallery').each(function(){
 				
@@ -1400,9 +1417,9 @@
 					self.fsTxtSho = false;
 					
 					if(self.fsTxt.children().length>0){
-						if(!self.mobileDevice){
+						//if(!self.mobileDevice){ // CHANGED - hides gallery text on mobile
 							self.fsTextOut();
-						}
+						//}
 					}
 					
 					self.isFsGal = false;
@@ -1411,45 +1428,47 @@
 					});
 					
 					var pp = parseInt(self.pHol.data("tp"));
-					if(self.isFsGal){
-						if(parseInt(self.pHol.css('height')) == self.pgHeight ){
-							if(self.pageAnimationType == "slide"){
-								self.pHol.animate(
-									{"left":-(self.pHol.width()+50)-(($(window).width()-self.pHol.width())/2)}, 1000, "easeInOutQuart",
-									function(){
-											self.bg_setup();
-								});
-							}else{
-								if(self.IE_old){
-									self.pHol.animate( {"top":pp }, 1000, "easeInOutQuart",
-										function(){ self.bg_setup(); self.pHol.css({"left":-(self.pHol.width()+50)-(($(window).width()-self.pHol.width())/2)}); }); 
-								}else{
-									self.pHol.animate( {"top":pp, "opacity":0}, 1000, "easeInOutQuart",
-										function(){ self.bg_setup(); });
-								}
-								
-								
-							}
-							
-						}else{
-							self.pHol.animate(
-								{"height":0}, 1000, "easeInOutQuart",
-								function(){
-									if(self.pageAnimationType == "slide"){
-										self.pHol.css({"left":-(self.pHol.width()+50)-(($(window).width()-self.pHol.width())/2)});
-									}else{
-										if(self.IE_old){
-											self.pHol.css({"left":-(self.pHol.width()+50)-(($(window).width()-self.pHol.width())/2)});
-										}else{
-											self.pHol.css( {"opacity":0});
-										}
-										self.pHol.css( {"top":pp});
-									}
-									self.bg_setup();
-							});							
-						}
-						
-					}else{
+                    
+                    // CHANGE - Commented this out to prevent footer moving up on the mobile gallery page 
+//					if(self.isFsGal){
+//						if(parseInt(self.pHol.css('height')) == self.pgHeight ){
+//							if(self.pageAnimationType == "slide"){
+//								self.pHol.animate(
+//									{"left":-(self.pHol.width()+50)-(($(window).width()-self.pHol.width())/2)}, 1000, "easeInOutQuart",
+//									function(){
+//											self.bg_setup();
+//								});
+//							}else{
+//								if(self.IE_old){
+//									self.pHol.animate( {"top":pp }, 1000, "easeInOutQuart",
+//										function(){ self.bg_setup(); self.pHol.css({"left":-(self.pHol.width()+50)-(($(window).width()-self.pHol.width())/2)}); }); 
+//								}else{
+//									self.pHol.animate( {"top":pp, "opacity":0}, 1000, "easeInOutQuart",
+//										function(){ self.bg_setup(); });
+//								}
+//								
+//								
+//							}
+//							
+//						}else{
+//							self.pHol.animate(
+//								{"height":0}, 1000, "easeInOutQuart",
+//								function(){
+//									if(self.pageAnimationType == "slide"){
+//										self.pHol.css({"left":-(self.pHol.width()+50)-(($(window).width()-self.pHol.width())/2)});
+//									}else{
+//										if(self.IE_old){
+//											self.pHol.css({"left":-(self.pHol.width()+50)-(($(window).width()-self.pHol.width())/2)});
+//										}else{
+//											self.pHol.css( {"opacity":0});
+//										}
+//										self.pHol.css( {"top":pp});
+//									}
+//									self.bg_setup();
+//							});							
+//						}
+//						
+//					}else{
 						if(self.prePg != self.url){
 							if(self.pageAnimationType == "slide"){
 								self.pHol.animate(
@@ -1469,7 +1488,7 @@
 								}
 							}
 						}
-					}
+					//}
 				}
 			}
 				
@@ -1548,6 +1567,21 @@
 					$(".pageHolder .page").find('.fs_gallery').each(function(){
 						self.isFsGal = true;
 					});
+                    
+        /**
+         * ========================================================
+         * Aaron custom function to not show pageHolder on page change
+         * =========================================================
+         */
+        if( self.isFsGal ) {
+            $(".pageHolder").css({"visibility": "hidden"});
+            $(".pageHolder .page").css({"visibility": "hidden"});
+            $(".fsThumb").css({"visibility": "hidden"});
+            $(".fsClo_inner").css({"visibility": "hidden"});
+        } else {
+            $(".pageHolder").css({"visibility": "visible"});
+            $(".pageHolder .page").css({"visibility": "visible"});
+        }
 					
 					// Reset the current page scrollbar variable	
 					self.oScrollbar = $('.pageHolder #scrollbar_holder');
@@ -1681,7 +1715,7 @@
 				$(this).data('loaded',true);
 			});	
 							
-
+            var isFsGal = false;
 			// full screen Gallery
 			ppg.find('.fs_gallery').each(function(){
 				self.shGal.show();
@@ -1689,6 +1723,7 @@
 				self.fsGallHide(true);
 				self.fsNxt.fadeIn();
 				self.fsPre.fadeIn();
+                isFsGal = true;
 			});
 							
 			// Video 
