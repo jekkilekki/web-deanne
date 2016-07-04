@@ -69,7 +69,7 @@
   });
 
 
-      $(document).ready(function(){
+$(document).ready(function(){
 
 
   /* Hook up the FlexSlider */
@@ -132,6 +132,7 @@
     fancy_Obj.fancybox({
       'transitionIn'		: 'elastic',
       'transitionOut'		: 'elastic',
+        'hideOnOverlayClick': true,
 
       'overlayColor'		: '#000',
       'padding' 			: 0,
@@ -216,6 +217,5 @@
     });
 
   });
-
 
 </script>

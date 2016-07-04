@@ -13,6 +13,8 @@
 	
 **/
 
+var firstPageLoad = true;
+
 (function( $ ){	
 	
 	function mainFm(selector, params){
@@ -120,15 +122,20 @@
 			// create gallery thumbnails previous button
 			self.pHol.prepend('<div id="fsGalPre" ><div class="fsPre_icon"> </div></div>');
 			self.gPre = $("#fsGalPre");
+        
+        
 			// create gallery Next image button
-			self.mCon.prepend('<div id="fsGalNextImg"><div class="fsBtnIcon"> </div> </div>');
-			self.fsNxt = $("#fsGalNextImg");
+    // CHANGE - using this button as the external link for home page content
+    self.mCon.prepend('<div class="container"><div id="fsGalNextImg"><span class="fsGalNextTxt">Go</span><div class="fsBtnIcon"> </div> </div></div>');
+    self.fsNxt = $("#fsGalNextImg");
+        
+        
 			// create gallery previous button
 			self.mCon.prepend('<div id="fsGalPreviousImg"><div class="fsBtnIcon" > </div> </div>');
 			self.fsPre = $("#fsGalPreviousImg");
 			// create gallery image Text container
 			self.mCon.prepend('<div class="container" ><div id="fsTextWarp" ></div></div>');
-            self.fsTxt = $("#fsTextWarp");		
+            self.fsTxt = $("#fsTextWarp");	
 			
 			self.fsPly = true;
 			self.fsArr = [];
@@ -235,9 +242,17 @@
 			});
 			
 			self.fsNxt.click(function(){
-				self.fsSlideshow("delay");
-				self.fsCur = self.fsCur+1 < self.fsArr.length ? self.fsCur+1 : 0;
-				self.fsImgLoad(self.fsArr[self.fsCur]);
+//				self.fsSlideshow("delay");
+//				self.fsCur = self.fsCur+1 < self.fsArr.length ? self.fsCur+1 : 0;
+//				self.fsImgLoad(self.fsArr[self.fsCur]);
+                
+                /* 
+                 * ================================================
+                    CHANGED - Aaron
+                    Redirect to the external link present 
+                 * ================================================
+                 */
+                window.location.href = $('.fs_x_link').attr('href');
 			});
 			
 			
@@ -289,11 +304,11 @@
 			self.tCon.hide();
 			self.foot.hide();
 			
-			self.gNex.css({"visibility" : "visible"});
-			self.gPre.css({"visibility" : "visible"});
+			self.gNex.css({"visibility" : "hidden"}); // CHANGED from visible
+			self.gPre.css({"visibility" : "hidden"}); // CHANGED from visible
 			self.gNex.fadeOut(50);
 			self.gPre.fadeOut(50);
-			
+            
 			// Initialize the menu button action
 			var kk = -1;
 			var qq = -1;
@@ -1106,6 +1121,7 @@
 				if(!self.IE_old){
 					$(".portfolio .item a .img_text").css("visibility","visible");
 				}
+                
 			}
 			
 			// Fade-out the loading bar
@@ -1232,13 +1248,16 @@
 				$(this).isotope( {}, 'reLayout' );						 
 			});
 			
-			//self.fsNxt.css({"top":$(window).height()/2+self.fsNxt.height()/2+"px"});
-			//self.fsPre.css({"top":$(window).height()/2+self.fsPre.height()/2+"px"});
-            self.fsNxt.css({"top":9999+"px"});
-			self.fsPre.css({"top":9999+"px"});
+			//self.fsNxt.css({"top":$(window).height()/2+self.fsNxt.height()/2+1+"px"});
+			//self.fsPre.css({"top":$(window).height()/2+self.fsPre.height()/2+"px"});        
+            
+            //self.fsNxt.css({"top":9999+"px"});
+			self.fsPre.css({"visibility":"hidden"});
 			self.fsTxt.css({"height":$(window).height()});
 
-			self.fsTxtSho = (!self.mobile && !self.mobileDevice);
+            // CHANGED - always show text on window resize and mobile
+			self.fsTxtSho = (/*!self.mobile && !self.mobileDevice*/ true);
+            
 
 			$(".pageHolder .page").find('.fs_gallery').each(function(){
 				
@@ -1272,6 +1291,36 @@
 					}
 				}
 			});	
+            
+    /**
+     * ========================================================
+        CHANGED - Aaron
+        Position the GO button relative to the Gallery text 
+     * ========================================================
+     */
+    // Get the offset and width of the Gallery text
+    var $upcoming = $('#upcoming'),
+        upcomingOffset = $upcoming.offset(),
+        upcomingWidth = $upcoming.width();
+       
+    var $firstOffset = upcomingOffset.top+37;   // GO Button offset on first page load
+    var $resizeOffset = upcomingOffset.top;     // GO Button offset on page resize
+            
+    var $realOffset = 0;
+            
+    if( !self.rez ) {   // If it's the FIRST page load (not resizing (self.rez))
+        $(window).resize(); // force a fake window "resize" here because the code below is perfect on resize (but not on page load)
+        $realOffset = $firstOffset;
+    } else if ( firstPageLoad ) {
+        $(window).resize();
+        $realOffset = $firstOffset;
+    } else {            // Else, we're resizing
+        $realOffset = $resizeOffset;
+    }
+            
+    
+    // Set the position of the GO Button to the top-right corner of the Gallery text box
+    self.fsNxt.css({"top":$realOffset+"px", "left":upcomingWidth-40+"px"});
 	
 		},
 
@@ -1721,8 +1770,12 @@
 				self.shGal.show();
 				self.fsView = true;
 				self.fsGallHide(true);
-				self.fsNxt.fadeIn();
-				self.fsPre.fadeIn();
+                if ( firstPageLoad ) {
+                    self.fsNxt.delay(1000).fadeIn();
+                } else {
+				    self.fsNxt.fadeIn(); // CHANGE - add a delay to come in right with the gallery text
+                }
+                //self.fsPre.fadeIn();
                 isFsGal = true;
 			});
 							
@@ -1783,6 +1836,12 @@
 							
 			// update the scrollbar 
 			self.oScrollbar.tinyscrollbar_update();	
+    /**
+     * ==========================================================
+     * CHANGED - Aaron - set firstPageLoad variable to FALSE so the GO button $(window).resize() command doesn't interfere with the other page loads
+     * ==========================================================
+     */
+    firstPageLoad = false;
 			
 		},
 		
@@ -1825,6 +1884,8 @@
 							});
 					});
 			})(jQuery);
+            
+            $(window).resize();
 			
 		},
 
@@ -1841,7 +1902,7 @@
 		},
 		
 		// Window Resize function
-		windowRez : function (){			
+		windowRez : function (){
 			var self = this;
 			self.loading.css({"left":$(window).width()/2-self.loading.width()/2, "top": $(window).height()/2+30});
 			self.rez = true;

@@ -131,7 +131,7 @@
         <!-- Film Images BEGIN -->
                 
                 <div class="item film">
-                    <a rel="example_group" class="fancyYoutube type1" href="https://youtube.com/watch?v=ONwpezTD2_M?rel=0&autoplay=1" title="Concerned Psychiatrist">
+                    <a rel="example_group" class="fancyYoutube type1" href="https://youtube.com/embed/ONwpezTD2_M?rel=0&autoplay=1" title="Concerned Psychiatrist">
                         <div class="img_text">
                             <h3 class="title_light">Concerned Psychiatrist</h3>
                         </div>

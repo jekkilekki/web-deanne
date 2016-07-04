@@ -31,6 +31,9 @@
     <link rel="icon" type="image/png" href="images/favicons/favicon-16x16.png" sizes="16x16">
     <link rel="manifest" href="images/favicons/manifest.json">
     <link rel="mask-icon" href="images/favicons/safari-pinned-tab.svg" color="#5bbad5">
+    <link rel="shortcut icon" href="images/favicons/favicon.ico">
+    <meta name="msapplication-config" content="images/favicons/browserconfig.xml">
+    <meta name="theme-color" content="#ffffff">
 
     <!-- Included CSS files
 	================================================== -->

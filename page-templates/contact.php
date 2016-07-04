@@ -4,7 +4,7 @@
     <div class="fifteen columns pgContent">
         <div class="mobile_spacing">
 
-            <h3 class="title_light">Contact</h3>
+            <h1 class="title_light">Contact</h1>
 
             <div class="separator_mini"></div>
 <!--            <div class="extra_padding">-->

@@ -15,7 +15,7 @@
          <div class="full_width" >
 			<div class="mobile_spacing" >
             	<!-- Tab Example-->
-             	<h3 class="title_light">Resume</h3>
+             	<h1 class="title_light">Resume</h1>
              	<br>
         		 <!-- Tab Navigation Begin -->
                  <ul class="tabs">
