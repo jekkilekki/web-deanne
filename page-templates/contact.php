@@ -35,7 +35,7 @@
                     <p>
                     Tel: 1.917.923.2136
                     <br/><br/>
-                    Email: <a>de(AT)deannedubin.com</a> <br/>
+                    Email: <a href="mailto:de@deannedubin.com">de(AT)deannedubin.com</a> <br/>
                     </p>
 <!--
                     <div class="separator_mini"></div>
@@ -45,10 +45,11 @@
             </div> 
 
             <!-- Third column -->
+<!--
             <div id="contact" class="six columns" >
                 <div class="mobile_right_spacing">
                 	<hr>
-                    <form name="contact" method="post" >
+                    <form name="contact" method="post" action="../mailer.php">
                         <input type="text" value="Name" id="name" name="name"
                         	onfocus="if(this.value == 'Name') {this.value = '';}"
                             onblur="if (this.value == '') {this.value = 'Name';}" />
@@ -65,6 +66,7 @@
                     </form>
                 </div>
             </div>
+-->
 <!--            </div>-->
 
         </div>

@@ -50,6 +50,7 @@ var firstPageLoad = true;
 			
 			self.bdy = $("body");
 			self.mCon = $(".mainContainer");
+
 			self.pHol = $(".pageHolder");
 			self.lCon = $(".logo");
 			self.tCon = $(".header");
@@ -81,7 +82,8 @@ var firstPageLoad = true;
 			}
 			
 			// Add background image loaded div
-			self.bdy.prepend('<div id="pgBackground" style="width:100%; height:100%; z-index:-10; overflow:hidden; position:absolute; left:0; top:0; "></div>');
+            // CHANGED - add min-height for home to show gallery text properly
+			self.bdy.prepend('<div id="pgBackground" style="width:100%; height:100%; min-height: 650px; z-index:-10; overflow:hidden; position:absolute; left:0; top:0; "></div>');
 			
 			var pgB = $('#pgBackground');
 			pgB.addClass('menu_color');
@@ -895,6 +897,8 @@ var firstPageLoad = true;
             $(".fsThumb").css({"visibility": "hidden"});
             $(".fsClo_inner").css({"visibility": "hidden"});
             
+        // CHANGED - add min-height to help mobile screens display homepage text properly
+            $(".contentWarp").css({"min-height":"464px"});
 			
 			self.fsWra.css({ "height": self.fsWra.children(':first-child').children(':last-child').position().top+self.fsThuHig+15 });					
 			var pTpos = $(window).height()-($(".contentWarp").position().top+$(".logo").height()+20+self.galHidHig+self.foot.height())-10;
@@ -1224,7 +1228,7 @@ var firstPageLoad = true;
 			// position the footer
 			var bHig = self.bCon.height()+4 > self.bHig ? self.bCon.height()+4 : self.bHig;
 			self.mCon.css('margin' , '0 auto '+ -bHig+'px');
-			$(".footer, .push").css("height", bHig+"px");
+			$(".footer, .push").css({"height":bHig+"px"});
 			
 			// Resize the portfolio
 			
@@ -1253,7 +1257,8 @@ var firstPageLoad = true;
             
             //self.fsNxt.css({"top":9999+"px"});
 			self.fsPre.css({"visibility":"hidden"});
-			self.fsTxt.css({"height":$(window).height()});
+            // CHANGED - add minimum height so that text on homepage won't overlap logo
+			self.fsTxt.css({"height":$(window).height(), "min-height":"600px"});
 
             // CHANGED - always show text on window resize and mobile
 			self.fsTxtSho = (/*!self.mobile && !self.mobileDevice*/ true);
@@ -1320,7 +1325,7 @@ var firstPageLoad = true;
             
     
     // Set the position of the GO Button to the top-right corner of the Gallery text box
-    self.fsNxt.css({"top":$realOffset+"px", "left":upcomingWidth-40+"px"});
+    self.fsNxt.css({"top":$realOffset+"px", "left":upcomingWidth-40+"px", "visibility":"hidden"});
 	
 		},
 

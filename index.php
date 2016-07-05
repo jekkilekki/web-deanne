@@ -21,6 +21,7 @@
 
 <html lang="en">
         
+<?php include( 'private/custom-mailer.php' ); ?>
 <?php include( 'private/head.php' );    // Contains <head> info ?>
     
     <body>

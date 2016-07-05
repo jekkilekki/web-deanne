@@ -61,7 +61,7 @@
 			bgSet = options;
 				
             $new.css( {
-                'position': ($.browser.msie || screen.width > 768 ? 'fixed' : 'absolute'),
+                'position': ($.browser.msie || screen.width > 768 ? 'fixed' : 'fixed'),
                 'left': '0px',
                 'top': '0px',
 				'z-index':10

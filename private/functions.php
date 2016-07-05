@@ -5,7 +5,7 @@
 <script type="text/javascript" src="js/jquery-1.7.1.min.js"></script>
 <script type="text/javascript" src="https://www.google.com/jsapi"></script>
 <script type="text/javascript" src="js/custom.min.js"></script>
-<script type="text/javascript" src="js/jquery.vegas.min.js" ></script>
+<script type="text/javascript" src="js/jquery.vegas.js" ></script>
 <script type="text/javascript" src="js/jquery.fancybox-1.3.4.min.js"></script>
 <script type="text/javascript" src="js/jquery.isotope.min.js" ></script>
 <script type="text/javascript" src="js/jquery.flexslider.min.js"></script>

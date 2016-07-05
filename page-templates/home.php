@@ -37,7 +37,7 @@
                             <div id="upcoming" class="fs_caption caption_style2">
                                 <div><img class="medium_image" src="images/site/homepage-images/homepage1.jpg"></div>
                             	<div><h3 class="title_light light_color text_shadow">Upcoming</h3><span class="span_link">http://www.bigdata.show</span></div>
-                                <div><h5 class="title_light light_color text_shadow">Principle voice in <a class="fs_x_link" href="http://www.bigdata.show">Big Data</a>, a nine-episode radio play about stealing the internet. Featuring guest artists Jemaine Clement, Paul F. Tompkins, Samm Levine and 60+ performers from around the world. Coming soon!</h5></div>
+                                <div><h5 class="title_light light_color text_shadow">Principle voice in Big Data, a nine-episode radio play about stealing the internet. Featuring guest artists Jemaine Clement, Paul F. Tompkins, Samm Levine and 60+ performers from around the world. Coming soon!</h5></div>
                             </div>
                             
                             
